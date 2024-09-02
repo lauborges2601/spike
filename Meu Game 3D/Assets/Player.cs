@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
         Debug.Log("START");
     }
 
-    private void onCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "chao")
         {
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && chao)
         {
             rb.AddForce(Vector3.up * + forcaPulo, ForceMode.Impulse);
-           chao = false
+           chao = false;
         }
         
         
