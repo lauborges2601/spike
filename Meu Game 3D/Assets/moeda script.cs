@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moedascript : MonoBehaviour
+public class moedas : MonoBehaviour
 {
     public int velocidadeGiro = 50;
 
@@ -11,7 +11,8 @@ public class moedascript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+             Destroy(gameObject);
+             FindObjectOfType<GameMeneger>().SubtrairMoedas(valor:1);
         }
 
 }
