@@ -1,32 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 
 public class GameMeneger : MonoBehaviour
 {
-    public int moedas;
-    public TMP_Text hud, msgVitoria; 
+    public TextMeshProUGUI HUD, MsgVitoria;
+    public int restantes;
+
     void Start()
     {
-        moedas = FindObjectsOfType<moedas>().Length;
-        
-    }
+        restantes = FindObjectsOfType<moedas>().Length;
 
-    public void AtualizarHud()
-    {
-        hud.text = $"Moedas restantes: {moedas}";
+        HUD.text = $"moedas Restantes: {restantes}";
     }
+    
 
-    public void SubtrairMoedas(int valor)
+    public void SubtrairMoedas (int Valor)
     {
-        moedas -= valor;
-        AtualizarHud();
-        if (moedas <= 0)
+        restantes -= Valor;
+        HUD.text = $"moedas Restantes: {restantes}"; 
+
+        if (restantes <= 0)
         {
             //ganhou o jogo
-            msgVitoria.text = "Parabéns";
+            MsgVitoria.text = "Congratulations!";
         }
+        
     }
     
     // Update is called once per frame
