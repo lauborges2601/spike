@@ -24,6 +24,12 @@ public class Player : MonoBehaviour
         {
             chao = true;
         }
+        
+        if (collision.gameObject.tag == "Respawn")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+        }
+        
 
 
     }
@@ -52,5 +58,5 @@ public class Player : MonoBehaviour
         Debug.Log("UPDATE"); 
     }
 }
-    
-    
+    //amo BTS meu utted é o Jimin. Sou army #BTSarmyForever Kim namjoon, Kim Seokjin, Min Yoongi, Jeon Hoseok, Park Jimin
+    //Kim Taehyung, Jeon Jungkoo, BTS, BTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
